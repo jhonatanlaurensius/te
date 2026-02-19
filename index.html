@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Private Access</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .card {
+      background: #020617;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      width: 300px;
+      box-shadow: 0 0 20px rgba(0,0,0,.6);
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 6px;
+      border: none;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 6px;
+      background: #38bdf8;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .error {
+      color: #f87171;
+      margin-top: 10px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<div class="card">
+  <h2>🔒 Private</h2>
+  <p>eh ada mas tede!</p>
+  <p>pass nya pakai yang udah dikasih ya haha</p>
+  <input type="password" id="pass" placeholder="Masukkan password">
+  <button onclick="check()">Masuk</button>
+  <div class="error" id="error">Password salah</div>
+</div>
+
+<script>
+  function check() {
+    const password = "jesjeslovers";
+    const input = document.getElementById("pass").value;
+
+    if (input === password) {
+      window.location.href = "secret.html";
+    } else {
+      document.getElementById("error").style.display = "block";
+    }
+  }
+</script>
+
+</body>
+</html>
